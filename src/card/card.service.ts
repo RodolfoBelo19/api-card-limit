@@ -18,16 +18,16 @@ export class CardService {
     return await this.cardModel.find().exec();
   }
 
-  async findOne(id: number) {
+  async findOne(id: string) {
     return await this.cardModel.findById(id).exec();
   }
 
-  async update(id: number, updateCardDto: UpdateCardDto) {
+  async update(id: string, updateCardDto: UpdateCardDto) {
     const updatedCard = await this.cardModel.findByIdAndUpdate(id, updateCardDto);
     return updatedCard;
   }
 
-  async remove(id: number) {
+  async remove(id: string) {
     return await this.cardModel.findByIdAndDelete(id);
   }
 }
