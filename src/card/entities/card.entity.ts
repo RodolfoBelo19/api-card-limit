@@ -5,6 +5,7 @@ export const CardSchema = new mongoose.Schema({
   limit: { type: Number, required: true },
   used: { type: Number, required: true },
   type: { type: String, required: true },
+  idUser: { type: String, required: true },
 });
 
 export interface Card {
@@ -13,4 +14,5 @@ export interface Card {
   limit: number;
   used: number;
   type: string;
+  idUser: string;
 }
